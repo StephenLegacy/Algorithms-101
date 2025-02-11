@@ -1,0 +1,35 @@
+BEGIN
+    length_counter := 0       // Counter for sentence length
+    word_counter := 0          // Counter for number of words
+    vowel_counter := 0         // Counter for number of vowels
+
+    // Read  1st character
+    READ character
+
+    // Process the sentence until the point is reached
+    WHILE character != '.' DO
+        // Increment the length counter for each character
+        length_counter := length_counter + 1
+
+        // Check if the character is a vowel
+        IF character IN ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] THEN
+            vowel_counter := vowel_counter + 1
+        END_IF
+
+        // Check if the character is a space to count words
+        IF character = ' ' THEN
+            word_counter := word_counter + 1
+        END_IF
+
+        // Read the next one
+        READ character
+    END_WHILE
+
+    // Add 1 to word_counter to account for the last word (since words are separated by spaces)
+    word_counter := word_counter + 1
+
+    // Output
+    WRITE "Length of the sentence: ", length_counter
+    WRITE "Number of words: ", word_counter
+    WRITE "Number of vowels: ", vowel_counter
+END
