@@ -25,11 +25,11 @@ BEGIN
         READ character
     END_WHILE
 
-    // Add 1 to word_counter to account for the last word (since words are separated by spaces)
+    // Add 1 to word_counter to account for the last word
     word_counter := word_counter + 1
 
     // Output
-    WRITE "Length of the sentence: ", length_counter
-    WRITE "Number of words: ", word_counter
-    WRITE "Number of vowels: ", vowel_counter
+    WRITE "Length: ", length_counter
+    WRITE "No. of words: ", word_counter
+    WRITE "No. of vowels: ", vowel_counter
 END
