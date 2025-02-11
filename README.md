@@ -1,5 +1,5 @@
 
-# Sentence Analyzer  
+# Sentence Reader
 
 This program reads a sentence character by character and computes the following:  
 - **Length of the sentence** (excluding the final period)  
